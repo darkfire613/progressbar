@@ -7,7 +7,7 @@ console.log("hello");
 
 $(document).ready(function(){
 	updatePercent();
-	//setInterval(updatePercent, 2000);
+	setInterval(updatePercent, 5000);
 });
 
 
