@@ -6,8 +6,10 @@ console.log("hello");
 
 
 $(document).ready(function(){
-	setInterval(updatePercent, 2000);
+	updatePercent();
+	//setInterval(updatePercent, 2000);
 });
+
 
 function percentRemaining(){
 	return ((Date.now() - startDate) / (endDate - startDate)) * 100;
@@ -15,5 +17,7 @@ function percentRemaining(){
 
 function updatePercent(){
 	$(".percentremaining").text(percentRemaining().toFixed(2) + "%");
-	$(".filled").width(percentRemaining() + "%");
+	$(".filled").animate({
+		width: percentRemaining() + "%",
+	}, 2000);
 }
