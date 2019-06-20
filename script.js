@@ -2,6 +2,7 @@
 const startDate = new Date('11 June 2019 12:00:00 CDT');
 const endDate = new Date('1 November 2019 12:00:00 CDT');
 var currDate = endDate;
+var currStr = "End Date";
 
 var dates = [
 	{
@@ -47,6 +48,7 @@ $(document).ready(function(){
 		});
 		console.log(d);
 		currDate = new Date(d.date);
+		currStr = d.label;
 
 		updatePercent();
 	});
@@ -67,7 +69,7 @@ function percentRemaining(){
 }
 
 function updatePercent(){
-	$("#percentremaining").text(percentRemaining().toFixed(2) + "%");
+	$("#percentremaining").text(percentRemaining().toFixed(2) + "% until " + currStr);
 	$("#filled").animate({
 		width: percentRemaining() + "%",
 	}, 1000, function(){
