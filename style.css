@@ -4,7 +4,7 @@
 	box-sizing: border-box;
 }
 
-.container{
+#container{
 	width: 100%;
 	text-align: center;
 }
@@ -20,7 +20,7 @@ span{
 	text-align: center;
 }
 
-.emptybar{
+#emptybar{
 	width: 80%;
 	margin: 0 auto;
 	height: 4em;
@@ -30,7 +30,7 @@ span{
 	overflow: hidden;
 }
 
-.filled{
+#filled{
 	margin: 0;
 	padding: 0;
 	width: 0%;
